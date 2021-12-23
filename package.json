@@ -1,5 +1,5 @@
 {
-  "name": "xresolve",
+  "name": "unix-path-resolve",
   "version": "1.0.1",
   "description": "Cross platform resolve that always returns a UNIX style `/` seperated path",
   "main": "index.js",
@@ -13,12 +13,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/mafintosh/xresolve.git"
+    "url": "https://github.com/mafintosh/unix-path-resolve.git"
   },
   "author": "Mathias Buus (@mafintosh)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/mafintosh/xresolve/issues"
+    "url": "https://github.com/mafintosh/unix-path-resolve/issues"
   },
-  "homepage": "https://github.com/mafintosh/xresolve"
+  "homepage": "https://github.com/mafintosh/unix-path-resolve"
 }
