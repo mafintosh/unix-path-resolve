@@ -1,7 +1,7 @@
 module.exports = resolve
 
 function parse (addr) {
-  const names = addr.split(/[\/\\]/)
+  const names = addr.split(/[/\\]/)
 
   const r = {
     isAbsolute: false,
