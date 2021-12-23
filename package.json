@@ -1,0 +1,23 @@
+{
+  "name": "xresolve",
+  "version": "0.0.0",
+  "description": "WIP - nothing to see here",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "brittle": "^2.0.1"
+  },
+  "scripts": {
+    "test": "brittle test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mafintosh/xresolve.git"
+  },
+  "author": "Mathias Buus (@mafintosh)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mafintosh/xresolve/issues"
+  },
+  "homepage": "https://github.com/mafintosh/xresolve"
+}
