@@ -1,5 +1,5 @@
 const test = require('brittle')
-const xresolve = require('xresolve')
+const xresolve = require('./')
 
 test('normalises', function (t) {
   t.is(xresolve('/a/b'), '/a/b')
