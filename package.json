@@ -1,6 +1,6 @@
 {
   "name": "xresolve",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Cross platform resolve that always returns a UNIX style `/` seperated path",
   "main": "index.js",
   "dependencies": {},
