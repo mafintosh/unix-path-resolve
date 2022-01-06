@@ -12,6 +12,7 @@ test('normalises', function (t) {
   t.is(resolve('file:///a/b/../../c'), '/c')
   t.is(resolve('proto://host/a/b/../../c'), '/c')
   t.is(resolve('c:\\dir\\file'), '/dir/file')
+  t.is(resolve('\\dir'), '/dir')
   t.exception(() => resolve('/..'))
 })
 
