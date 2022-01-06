@@ -28,7 +28,7 @@ function parse (addr) {
     return r
   }
 
-  r.isAbsolute = addr.startsWith('/')
+  r.isAbsolute = addr.startsWith('/') || addr.startsWith('\\')
 
   return r
 }
