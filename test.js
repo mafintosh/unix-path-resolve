@@ -23,3 +23,11 @@ test('resolve two paths', function (t) {
   t.is(resolve('/a', '/b'), '/b')
   t.exception(() => resolve('a', 'b'))
 })
+
+test('resolve more than two paths', function (t) {
+  t.is(resolve('/a/b', 'c/d', 'e/f'), '/a/b/c/d/e/f')
+  t.is(resolve('/a/b', '../c/d', '../e/f'), '/a/c/e/f')
+  t.is(resolve('/', '\\c\\d/e', '\\f/g'), '/f/g')
+  t.is(resolve('/a', '/b', '/c'), '/c')
+  t.exception(() => resolve('a', 'b', 'c'))
+})

@@ -1,4 +1,13 @@
-module.exports = resolve
+module.exports = fold
+
+function fold (...args) {
+  if (args.length === 1) {
+    return resolve(args[0])
+  } else {
+    const last = args.pop()
+    return resolve(fold(...args), last)
+  }
+}
 
 function parse (addr) {
   const names = addr.split(/[/\\]/)
