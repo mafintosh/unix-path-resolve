@@ -1,6 +1,6 @@
 module.exports = resolve
 
-function parse (addr) {
+function parse(addr) {
   const names = addr.split(/[/\\]/)
 
   const r = {
@@ -14,7 +14,8 @@ function parse (addr) {
   if (names.length > 1 && names[0].endsWith(':')) {
     r.isAbsolute = true
 
-    if (names[0].length === 2) { // windows
+    if (names[0].length === 2) {
+      // windows
       r.names = names.slice(1)
       return r
     }
@@ -33,7 +34,7 @@ function parse (addr) {
   return r
 }
 
-function resolve (a, b = '') {
+function resolve(a, b = '') {
   const ap = parse(a)
   const bp = parse(b)
 
@@ -48,21 +49,22 @@ function resolve (a, b = '') {
   return resolveNames(ap.names, bp.names)
 }
 
-function toString (p, names) {
+function toString(p, names) {
   for (let i = 0; i < names.length; i++) {
     if (names[i] === '') continue
     if (names[i] === '.') continue
     if (names[i] === '..') {
-      if (p.length === 1) throw new Error('Path cannot be resolved, too many \'..\'')
+      if (p.length === 1)
+        throw new Error("Path cannot be resolved, too many '..'")
       p = p.slice(0, p.lastIndexOf('/')) || '/'
       continue
     }
-    p += (p.length === 1 ? names[i] : '/' + names[i])
+    p += p.length === 1 ? names[i] : '/' + names[i]
   }
 
   return p
 }
 
-function resolveNames (a, b) {
+function resolveNames(a, b) {
   return toString(toString('/', a), b)
 }

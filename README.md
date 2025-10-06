@@ -10,7 +10,7 @@ Mostly useful for resolving modules cross platform
 
 ## Usage
 
-``` js
+```js
 const resolve = require('unix-path-resolve')
 
 resolve('/foo/bar', '../baz') // /foo/baz
