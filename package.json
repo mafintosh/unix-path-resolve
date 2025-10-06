@@ -3,13 +3,15 @@
   "version": "1.0.2",
   "description": "Cross platform resolve that always returns a UNIX style `/` seperated path",
   "main": "index.js",
-  "dependencies": {},
   "devDependencies": {
     "brittle": "^2.0.1",
-    "standard": "^16.0.4"
+    "prettier": "^3.6.2",
+    "prettier-config-holepunch": "^1.0.0"
   },
   "scripts": {
-    "test": "standard && brittle test.js"
+    "format": "prettier --write .",
+    "lint": "prettier --check .",
+    "test": "brittle test.js"
   },
   "repository": {
     "type": "git",
