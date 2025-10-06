@@ -54,8 +54,7 @@ function toString(p, names) {
     if (names[i] === '') continue
     if (names[i] === '.') continue
     if (names[i] === '..') {
-      if (p.length === 1)
-        throw new Error("Path cannot be resolved, too many '..'")
+      if (p.length === 1) throw new Error("Path cannot be resolved, too many '..'")
       p = p.slice(0, p.lastIndexOf('/')) || '/'
       continue
     }
